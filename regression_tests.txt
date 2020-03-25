@@ -1,0 +1,71 @@
+putstones b a3 b3 b4 c4 d4 e4 c5 d5 e5
+putstones w a1 c2
+solve w a1-c2
+> -1: b1 b2
+
+putstones w a1 c2
+solve w a1-c2
+> -1: b1 b2
+
+putstones b c5 d5 e5 b4 c4 d4 e4
+putstones w a1 c2
+solve b a1-c2
+> 1: pass
+
+putstones b a3 b4 c4 c5 d5 e5
+putstones w a1 e3
+solve w a1-e3
+> -3: c2
+
+putstones b a3 b4 c4 d4 c5 d5 e5
+putstones w a1 e3
+solve b a1-e3
+> 1000: b1 b2 c2 d2 d3
+
+putstones b b4 c4 d4 e4 c5 d5 e5
+putstones w b1 b2 c1 c3 d2
+solve w b1-ne|wring
+> 499: d3
+
+putstones b b4 c4 d4 e4 c5 d5 e5
+putstones w b1 b2 c1 c3 d2
+solve b b1-ne|wring
+> 1000: d3
+
+putstones b c5 d5 e5 b4 e4 a3 e3
+putstones w a1 b1 c1 c4
+solve w c4-a1
+> -2: a2 b2 b3 c2 c3
+
+putstones b c5 d5 e5 b4 e4 a3 e3
+putstones w a1 b1 c1 c4
+solve b c4-a1
+> 2: pass b2
+
+putstones b a3 b3 a2 b4 d3 e3 d2 e4 c1 e5
+putstones w c3
+solve w c3-se|c3-ne
+> -2: b1 b2 c2 c4 d4 d5
+
+putstones b a3 b3 a2 b4 d3 e3 d2 e4 c1 e5
+putstones w c3
+solve b c3-se|c3-ne
+> 2: pass
+
+putstones b a3 b3 a2 b4 d3 e3 d2 e4 c1 e5
+putstones w c3
+solve w c3-se
+> -2: b1
+
+putstones b a3 b3 a2 b4 d3 e3 d2 e4 c1 e5
+putstones w c3
+solve b c3-se
+> 1000: b1 b2 c2
+
+putstones w b4 d5 e4 d2 b1 a2
+solve w wring
+> 495: a1 a3 b2 b3 c1 c2 c4 c5 d3 d4 e3 e5
+
+putstones w b4 d5 e4 d2 b1 a2
+solve b wring
+> 501: b2 b3 c2 c4 d3 d4
